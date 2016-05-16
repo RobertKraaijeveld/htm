@@ -49,6 +49,7 @@ class Pool extends LongKeyedMapper[Pool] with OneToMany[Long, Pool] with ManyToM
 }
 object Pool extends Pool with LongKeyedMetaMapper[Pool] {
   def defaultArena(tournament: Tournament): Arena = {
+  //ROBERT Changed this: Used to be .findAll.head;
     tournament.defaultArena.foreign.getOrElse(Arena.findAll.head)
   }
 

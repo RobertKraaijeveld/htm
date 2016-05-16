@@ -6,7 +6,7 @@ import org.mortbay.jetty.nio._
 object RunBattleStation extends App {
   val server = new Server
   val scc = new SelectChannelConnector
-  scc.setPort(8080)
+  scc.setPort(8079)
   server.setConnectors(Array(scc))
 
   val context = new WebAppContext()
